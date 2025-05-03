@@ -7,31 +7,34 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting a verification issue related to my profile! Please provide the details below so I can look into it.
+        Thanks for reporting a verification issue related to my profile! Please provide the details below so I can investigate it. Make sure to provide complete and clear information.
 
   - type: input
     id: profile_url
     attributes:
       label: What is the URL of the profile being verified?
       description: Enter the URL of the profile that is being verified.
-      placeholder: e.g. https://mydomain.com/profile or https://profile.example.com
+      placeholder: e.g. https://domain.com/profile or https://profile.example.com
     validations:
       required: true
+      minLength: 11  # Ensures the URL has at least 10 characters (basic URL length check)
 
   - type: textarea
     id: observed_behavior
     attributes:
       label: What was observed?
-      description: Copy the error message or describe what exactly went wrong.
+      description: Copy the error message or describe what exactly went wrong. (Minimum 50 characters)
       placeholder: e.g. "Verification failed because it couldn't reach the .well-known file"
     validations:
       required: true
+      minLength: 30  # Ensures a minimum of 50 characters in the description
 
   - type: textarea
     id: additional_context
     attributes:
       label: Additional context
-      description: Add any screenshots, logs, or other notes that might help.
+      description: Add any screenshots, logs, or other notes that might help. (Optional)
       placeholder: Optional
     validations:
       required: false
+      minLength: 10  # Optional field with a minimum length for more helpful context if filled
