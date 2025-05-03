@@ -1,0 +1,37 @@
+name: Verification Issue
+description: Report if a page or service says it can't verify my .well-known profile.
+title: "Verification Issue | Page says it can't verify"
+labels: [bug, verification]
+assignees: ["zaorinu"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a verification issue related to my profile! Please provide the details below so I can look into it.
+
+  - type: input
+    id: profile_url
+    attributes:
+      label: What is the URL of the profile being verified?
+      description: Enter the URL of the profile that is being verified.
+      placeholder: e.g. https://mydomain.com/profile or https://profile.example.com
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed_behavior
+    attributes:
+      label: What was observed?
+      description: Copy the error message or describe what exactly went wrong.
+      placeholder: e.g. "Verification failed because it couldn't reach the .well-known file"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Add any screenshots, logs, or other notes that might help.
+      placeholder: Optional
+    validations:
+      required: false
